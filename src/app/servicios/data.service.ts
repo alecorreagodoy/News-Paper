@@ -37,7 +37,7 @@ showTitulares(){
 }
 
 showApartado(){
-  this._http.get("https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?domains=wsj.com&apiKey=86578233d7974ac7add39e656eec5e09" )
+  this._http.get("http://newsapi.org/v2/everything?domains=wsj.com&apiKey=86578233d7974ac7add39e656eec5e09" )
   //este observable se resolvera cuando s
   .subscribe( (responseAPI)=>{
     this.noticias = responseAPI["articles"]
