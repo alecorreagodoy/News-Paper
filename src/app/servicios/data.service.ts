@@ -30,14 +30,14 @@ export class DataService {
     
   
 showTitulares(){
-  this._http.get("http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=86578233d7974ac7add39e656eec5e09")
+  this._http.get("https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=86578233d7974ac7add39e656eec5e09")
   .subscribe( (responseAPI)=>{
     this.techNews = responseAPI["articles"]
 })
 }
 
 showApartado(){
-  this._http.get("http://newsapi.org/v2/everything?domains=wsj.com&apiKey=86578233d7974ac7add39e656eec5e09" )
+  this._http.get("https://newsapi.org/v2/everything?domains=wsj.com&apiKey=86578233d7974ac7add39e656eec5e09" )
   //este observable se resolvera cuando s
   .subscribe( (responseAPI)=>{
     this.noticias = responseAPI["articles"]
